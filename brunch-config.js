@@ -4,6 +4,9 @@ module.exports = {
       joinTo: {
         'vendor.js': /^(?!app)/,
         'app.js': /^app/
+      },
+      order: {
+        before: ['vendor/tether.min.js', 'vendor/bootstrap.min.js']
       }
     },
     stylesheets: {
@@ -19,6 +22,13 @@ module.exports = {
           'node_modules/bootstrap/scss'
         ]
       }
+    }
+  },
+  npm: {
+    globals: {
+      $: 'jquery',
+      jQuery: 'jquery',
+      tether: 'tether'
     }
   }
 };
